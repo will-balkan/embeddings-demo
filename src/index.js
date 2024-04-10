@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $ from 'jQuery';
 import './style.scss';
 
 let num = 0;
