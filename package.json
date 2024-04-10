@@ -23,7 +23,7 @@
     "vite-plugin-eslint": "^1.8.1"
   },
   "dependencies": {
-    "jQuery": "^1.7.4",
+    "jquery": "^3.7.1",
     "jsdom": "^24.0.0",
     "location": "^0.0.1",
     "navigator": "^1.0.1",
