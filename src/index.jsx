@@ -2,7 +2,8 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.scss';
 import {
-  BrowserRouter, Routes, Route, NavLink, useParams,
+  createBrowserRouter, NavLink, useParams,
+  RouterProvider, Outlet,
 } from 'react-router-dom';
 
 function About(props) {
@@ -34,19 +35,31 @@ function FallBack(props) {
   return <div>URL Not Found</div>;
 }
 
-function App(props) {
+function Layout() {
   return (
-    <BrowserRouter>
-      <div>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/test/:id" element={<Test />} />
-          <Route path="*" element={<FallBack />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <>
+      <Nav />
+      <Outlet />
+    </>
+  );
+}
+
+const router = createBrowserRouter([
+  {
+    Component: Layout,
+    children: [
+      { path: '/', Component: Welcome },
+      { path: '/about', Component: About },
+      { path: '/test/:id', Component: Test },
+      { path: '*', Component: FallBack },
+    ],
+  },
+
+]);
+
+export default function App() {
+  return (
+    <RouterProvider router={router} />
   );
 }
 
