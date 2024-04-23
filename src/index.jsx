@@ -6,11 +6,21 @@ import {
   RouterProvider, Outlet,
 } from 'react-router-dom';
 
+import Counter from './components/counter';
+import Controls from './components/controls';
+
+import './store';
+
 function About(props) {
   return <div> All there is to know about me </div>;
 }
 function Welcome(props) {
-  return <div>Welcome</div>;
+  return (
+    <div>Welcome
+      <Counter />
+      <Controls />
+    </div>
+  );
 }
 
 function Nav(props) {
