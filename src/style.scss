@@ -1,22 +1,72 @@
 body, html {
     font-family: "Roboto", sans-serif;
-    background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+    background: rgb(33, 194, 127);
     height: 100%;
-    color: rgb(123, 20, 234);
+    color: black;
   }
-  
-.logo {
-    background-image: url('img/astronaut.png');
-    width: 100px;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
 
 :root {
     text-size-adjust: 100%;
   }
 
-  .active {
-    color: pink;
-  }
+.active {
+  color: pink;
+}
+
+.query-container {
+  position: absolute;
+  width: 98%;
+  top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: max-content;
+  padding-top: 50px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.output-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  width: 800px;
+  padding: 15px;
+}
+
+.output-container pre{
+  font-family: 'Roboto';
+  font-size: 16px;
+}
+
+.input-container input {
+  width: 600px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 24px;
+  box-sizing: border-box;
+}
+
+.input-container button {
+  height: 42px;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.query-container button:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
