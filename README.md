@@ -2,7 +2,7 @@
 
 *description*
 
-[deployed url](http://url-if-deployed-here)
+[deployed url](https://embeddings-demo.onrender.com/)
 
 ## What Worked Well
 
